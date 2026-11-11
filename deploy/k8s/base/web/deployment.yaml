@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orchid-web
+  labels:
+    app.kubernetes.io/name: orchid-web
+    app.kubernetes.io/part-of: orchid
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: orchid-web
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: orchid-web
+        app.kubernetes.io/part-of: orchid
+    spec:
+      serviceAccountName: orchid-service-account
+      imagePullSecrets:
+        - name: harbor-registry
+      containers:
+        - name: web
+          image: harbor.hanul.botanicsoft.com/orchid/web:latest
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 25m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi

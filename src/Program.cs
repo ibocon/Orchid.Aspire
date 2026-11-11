@@ -18,7 +18,8 @@ public static class Program
         return new Dictionary<string, string>(StringComparer.Ordinal)
         {
             ["orchid-api-gateway"] = $"{registryPrefix}api-gateway:{imageTag}",
-            ["orchid-clipboard"] = $"{registryPrefix}clipboard:{imageTag}"
+            ["orchid-clipboard"] = $"{registryPrefix}clipboard:{imageTag}",
+            ["orchid-web"] = $"{registryPrefix}web:{imageTag}"
         };
     }
 

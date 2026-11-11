@@ -7,3 +7,5 @@ resources:
   - clipboard/deployment.yaml
   - clipboard/service.yaml
   - clipboard/config-map.yaml
+  - web/deployment.yaml
+  - web/service.yaml

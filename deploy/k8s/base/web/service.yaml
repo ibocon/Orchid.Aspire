@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: orchid-web-service
+  labels:
+    app.kubernetes.io/name: orchid-web
+    app.kubernetes.io/part-of: orchid
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: orchid-web
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+      protocol: TCP

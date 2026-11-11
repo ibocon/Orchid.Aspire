@@ -20,6 +20,7 @@ data:
         "Routes": {
           "clipboard-subpath-route": {
             "ClusterId": "clipboard-cluster",
+            "Order": 1,
             "Match": {
               "Path": "/orchid/api/clipboard/{**catch-all}"
             },
@@ -29,8 +30,19 @@ data:
           },
           "realtime-hub-subpath-route": {
             "ClusterId": "clipboard-cluster",
+            "Order": 1,
             "Match": {
               "Path": "/orchid/hubs/clipboard/{**catch-all}"
+            },
+            "Transforms": [
+              { "PathRemovePrefix": "/orchid" }
+            ]
+          },
+          "web-subpath-route": {
+            "ClusterId": "web-cluster",
+            "Order": 2,
+            "Match": {
+              "Path": "/orchid/{**catch-all}"
             },
             "Transforms": [
               { "PathRemovePrefix": "/orchid" }
@@ -54,6 +66,13 @@ data:
             "Destinations": {
               "destination1": {
                 "Address": "http://orchid-clipboard-service:8080"
+              }
+            }
+          },
+          "web-cluster": {
+            "Destinations": {
+              "destination1": {
+                "Address": "http://orchid-web-service:8080"
               }
             }
           }
