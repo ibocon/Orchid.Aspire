@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/Item/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="NuGet.config" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Service/Aspire/">
+    <Project Path="src/Orchid.Service.Aspire.csproj" />
+  </Folder>
+  <Folder Name="/Service/Aspire/Tests/">
+    <Project Path="test/Tests/Orchid.Service.Aspire.Tests.csproj" />
+  </Folder>
+</Solution>
