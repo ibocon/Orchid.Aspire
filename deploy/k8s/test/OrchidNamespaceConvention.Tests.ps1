@@ -1,5 +1,5 @@
 BeforeAll {
-    $script:RepositoryRoot = (Resolve-Path -Path (Join-Path -Path $PSScriptRoot -ChildPath '../..')).Path
+    $script:RepositoryRoot = (Resolve-Path -Path (Join-Path -Path $PSScriptRoot -ChildPath '../../..')).Path
 
     function Get-RenderedManifest {
         [CmdletBinding()]

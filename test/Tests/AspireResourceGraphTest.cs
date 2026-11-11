@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Orchid.Service.Aspire.Tests;
 
-public sealed class AspireResourceGraphTests
+public sealed class AspireResourceGraphTest
 {
     [Fact]
     public void GetServiceImagesShouldIncludeApiGatewayAndClipboardContainers()

@@ -1,7 +1,7 @@
 #requires -Modules @{ ModuleName = 'Pester'; ModuleVersion = '5.0' }
 
 BeforeAll {
-    $script:RepositoryRoot = (Resolve-Path -Path (Join-Path -Path $PSScriptRoot -ChildPath '../..')).Path
+    $script:RepositoryRoot = (Resolve-Path -Path (Join-Path -Path $PSScriptRoot -ChildPath '../../..')).Path
     $script:AllowedKeys = @(
         'app/orchid/stag/api-gateway'
         'app/orchid/stag/clipboard'
