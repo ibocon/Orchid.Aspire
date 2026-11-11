@@ -18,6 +18,24 @@ data:
       "AllowedHosts": "*",
       "ReverseProxy": {
         "Routes": {
+          "clipboard-subpath-route": {
+            "ClusterId": "clipboard-cluster",
+            "Match": {
+              "Path": "/orchid/api/clipboard/{**catch-all}"
+            },
+            "Transforms": [
+              { "PathRemovePrefix": "/orchid" }
+            ]
+          },
+          "realtime-hub-subpath-route": {
+            "ClusterId": "clipboard-cluster",
+            "Match": {
+              "Path": "/orchid/hubs/clipboard/{**catch-all}"
+            },
+            "Transforms": [
+              { "PathRemovePrefix": "/orchid" }
+            ]
+          },
           "clipboard-route": {
             "ClusterId": "clipboard-cluster",
             "Match": {

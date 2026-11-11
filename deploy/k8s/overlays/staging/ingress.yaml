@@ -11,13 +11,13 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - orchid.stag.botanicsoft.com
+        - stag.botanicsoft.com
       secretName: orchid-stag-tls
   rules:
-    - host: orchid.stag.botanicsoft.com
+    - host: stag.botanicsoft.com
       http:
         paths:
-          - path: /
+          - path: /orchid
             pathType: Prefix
             backend:
               service:

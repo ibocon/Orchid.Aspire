@@ -11,13 +11,13 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - orchid.prod.botanicsoft.com
+        - prod.botanicsoft.com
       secretName: orchid-prod-tls
   rules:
-    - host: orchid.prod.botanicsoft.com
+    - host: prod.botanicsoft.com
       http:
         paths:
-          - path: /
+          - path: /orchid
             pathType: Prefix
             backend:
               service:
