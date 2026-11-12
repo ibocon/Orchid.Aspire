@@ -16,7 +16,6 @@ spec:
         app.kubernetes.io/name: orchid-web
         app.kubernetes.io/part-of: orchid
     spec:
-      serviceAccountName: orchid-service-account
       imagePullSecrets:
         - name: harbor-registry
       containers:
