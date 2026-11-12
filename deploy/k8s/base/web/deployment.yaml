@@ -16,6 +16,7 @@ spec:
         app.kubernetes.io/name: orchid-web
         app.kubernetes.io/part-of: orchid
     spec:
+      serviceAccountName: default
       imagePullSecrets:
         - name: harbor-registry
       containers:
